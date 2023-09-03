@@ -1,0 +1,93 @@
+[{
+	"id": "grim",
+	"person": {
+		"alias": "Grim",
+		"id": "gary"
+	},
+	"presence": {
+		"primitive": "available",
+		"message": "💤 Sleeping... 😴",
+		"idle": 1337
+	},
+	"username": "Gary",
+	"tags": [
+		"group:Family"
+	]
+}, {
+	"id": "john",
+	"alias": "Rekkanoryo",
+	"person": {
+		"id": "john"
+	},
+	"presence": {
+		"primitive": "away"
+	},
+	"tags": [
+		"group:Friends"
+	],
+	"username": "John"
+}, {
+	"id": "elliott",
+	"person": {
+		"id": "elliott"
+	},
+	"presence": {
+		"primitive": "away",
+		"message": "Coding..."
+	},
+	"tags": [
+		"group:Work"
+	],
+	"username": "Elliott"
+}, {
+	"id": "richard",
+	"person": {
+		"id": "richard"
+	},
+	"presence": {
+		"primitive": "available"
+	},
+	"tags": [
+		"group:Work"
+	],
+	"username": "Richard"
+}, {
+	"id": "eion",
+	"person": {
+		"id": "eion"
+	},
+	"presence": {
+		"primitive": "available",
+		"message": "Writing crazy patches!"
+	},
+	"tags": [
+		"group:School"
+	],
+	"username": "Eion"
+}, {
+	"id": "markus",
+	"person": {
+		"id": "markus"
+	},
+	"presence": {
+		"primitive": "extended_away",
+		"message": "Running all the things in valgrind..."
+	},
+	"tags": [
+		"group:School"
+	],
+	"username": "Markus"
+}, {
+	"id": "echo",
+	"person": {
+		"id": "echo"
+	},
+	"presence": {
+		"primitive": "available",
+		"message": "Cursed to speak the last words spoken to me"
+	},
+	"tags": [
+		"group:Nymphs"
+	],
+	"username": "Echo"
+}]

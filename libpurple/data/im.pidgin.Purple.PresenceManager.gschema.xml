@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemalist>
+  <enum id="im.pidgin.Purple.PresencePrimitive">
+    <value nick="offline" value="0"/>
+    <value nick="available" value="1"/>
+    <value nick="idle" value="2"/>
+    <value nick="invisible" value="3"/>
+    <value nick="away" value="4"/>
+    <value nick="extended away" value="5"/>
+    <value nick="streaming" value="6"/>
+  </enum>
+
+  <schema id="im.pidgin.Purple.SavedPresence">
+    <key name="last-used" type="s">
+      <default>""</default>
+      <summary>The last time this presence was used</summary>
+      <description>
+        An ISO-8601 formatted time stamp of the last time this presence was used.
+      </description>
+    </key>
+
+    <key name="use-count" type="t">
+      <default>0</default>
+      <summary>The number of times this presence has been used.</summary>
+      <description>
+        A counter for how many times the user has used this presence.
+      </description>
+    </key>
+
+    <key name="name" type="s">
+      <default>""</default>
+      <summary>The name of this presence</summary>
+      <description>
+        A name for this presence. If this is empty or otherwise not provided a random name will be generated.
+      </description>
+    </key>
+
+    <key name="primitive" enum="im.pidgin.Purple.PresencePrimitive">
+      <default>"offline"</default>
+      <summary>The primitive type</summary>
+      <description>
+        The PurplePresencePrimitive for this presence.
+      </description>
+    </key>
+
+    <key name="message" type="s">
+      <default>""</default>
+      <summary>A message for this presence</summary>
+      <description>
+        A user supplied message for this presence. This could be something like "Be back later..", "At work", etc.
+      </description>
+    </key>
+
+    <key name="emoji" type="s">
+      <default>""</default>
+      <summary>An emoji to associate with this status</summary>
+      <description>
+        An emoji is typically associated with a status to convey a user's mood or just for fun. Either way this field handles that case.
+      </description>
+    </key>
+  </schema>
+</schemalist>

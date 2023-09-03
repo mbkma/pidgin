@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 
+
+Pidgin - Internet Messenger
+Copyright (C) Pidgin Developers <devel@pidgin.im>
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, see <https://www.gnu.org/licenses/>.
+
+-->
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <!-- interface-license-type gplv2 -->
+  <!-- interface-name Pidgin -->
+  <!-- interface-description Internet Messenger -->
+  <!-- interface-copyright Pidgin Developers <devel@pidgin.im> -->
+  <template class="PidginStatusBox" parent="GtkBox">
+    <property name="focusable">1</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkMenuButton" id="button">
+        <property name="focusable">1</property>
+        <property name="always-show-arrow">1</property>
+        <property name="child">
+          <object class="PidginStatusDisplay" id="display"/>
+        </property>
+        <property name="menu-model">menu</property>
+      </object>
+    </child>
+  </template>
+  <menu id="menu">
+    <section id="primitives">
+      <!-- NOTE: labels are automatically set for primitives from the target primitive. -->
+      <item>
+        <attribute name="action">status.set-primitive</attribute>
+        <attribute name="target">available</attribute>
+        <attribute name="custom">available</attribute>
+      </item>
+      <item>
+        <attribute name="action">status.set-primitive</attribute>
+        <attribute name="target">away</attribute>
+        <attribute name="custom">away</attribute>
+      </item>
+      <item>
+        <attribute name="action">status.set-primitive</attribute>
+        <attribute name="target">unavailable</attribute>
+        <attribute name="custom">unavailable</attribute>
+      </item>
+      <item>
+        <attribute name="action">status.set-primitive</attribute>
+        <attribute name="target">invisible</attribute>
+        <attribute name="custom">invisible</attribute>
+      </item>
+      <item>
+        <attribute name="action">status.set-primitive</attribute>
+        <attribute name="target">offline</attribute>
+        <attribute name="custom">offline</attribute>
+      </item>
+    </section>
+    <section id="saved_statuses"/>
+    <section id="actions">
+      <item>
+        <attribute name="label" translatable="1">New Status...</attribute>
+        <attribute name="action">app.new-status</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="1">Saved Statuses...</attribute>
+        <attribute name="action">app.status-manager</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

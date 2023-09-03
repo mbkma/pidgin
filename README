@@ -1,0 +1,98 @@
+[![pidgin wordmark](img/wordmark.png)](https://pidgin.im/)
+
+# Purple, Pidgin and Finch
+
+libpurple is a library intended to be used by programmers seeking to write an
+IM client that connects to many IM networks. It comes with support for Bonjour,
+IRC, and XMPP, among others and there are many more networks supported via
+[third party plugins](https://pidgin.im/plugins/).
+
+Pidgin is a graphical IM client written in C, which uses the GTK toolkit.
+
+Finch is a text-based IM client written in C, which uses
+[libgnt](https://keep.imfreedom.org/libgnt/libgnt).
+
+These programs are not endorsed by, nor affiliated with, any proprietary
+instant messaging company in any way.
+
+## Contributors
+
+See AUTHORS and COPYRIGHT for the list of contributors.
+
+## Building
+
+Pidgin uses [Meson](https://mesonbuild.com) as its build system. There is a
+long list of dependencies that is not currently documented here due to
+differences in package names across operating systems. We plan to fix this
+soon, if you have any suggestions on how to handle this, please let us know.
+
+You can quickly build Pidgin with the following commands:
+
+```
+meson setup build
+cd build
+ninja
+```
+
+There are quite a few options for the build that you can view by running
+`meson configure` in your build directory. You can specify the options when
+running meson like the following:
+
+```
+meson setup -Ddebug=true build
+```
+
+If you have already run `meson setup` you can use `meson configure`:
+
+```
+cd build
+meson configure -Ddebug=true
+```
+
+## Installing/Running
+
+Previously while developing in our code base you would need to install
+everything to be able to run or test anything. With meson this is no longer the
+case. You can compile via the steps above, and then run directly from the build
+directory with the following command to run Pidgin 3:
+
+```
+cd build
+meson devenv pidgin3
+```
+
+If you're working against Finch 3 you can use:
+
+```
+cd build
+meson devenv finch3
+```
+
+Obviously you're still free to install into your system directly, but then
+you'll most likely end up having orphaned files laying around that our build
+system doesn't know how to remove once they're removed from our code base. This
+is one of the primary reasons we recommend building and running from a devenv.
+Another benefit is that the devenv uses a configuration directory inside of
+the build directory rather than in your home directory.
+
+If you come across a bug, please report it at:
+[issues.imfreedom.org/issues/PIDGIN](https://issues.imfreedom.org/issues/PIDGIN)
+
+## Plugins
+
+libpurple, Pidgin, and Finch ship with a number of plugins, but you can find
+additional third party plugins at
+[pidgin.im/plugins](https://pidgin.im/plugins).
+
+## Developing
+
+You can find more information about Pidgin development in the
+[development section](https://pidgin.im/development/) of our website.
+
+## Sponsors
+
+Pidgin is supported by DigitalOcean who graciously sponsors all of our
+infrastructure.
+
+[![DigitalOcean referal link](img/DO_Logo_horizontal_blue.png)](https://www.digitalocean.com/?refcode=b69e5dddf595&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+

@@ -1,0 +1,6 @@
+subdir('disco')
+subdir('gestures')
+subdir('iconaway')
+subdir('transparency')
+subdir('unity', if_found : UNITY)
+subdir('xmppconsole')

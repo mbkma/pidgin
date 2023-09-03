@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 
+
+Pidgin - Internet Messenger
+Copyright (C) Pidgin Developers <devel@pidgin.im>
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, see <https://www.gnu.org/licenses/>.
+
+-->
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <!-- interface-license-type gplv2 -->
+  <!-- interface-name Pidgin -->
+  <!-- interface-description Internet Messenger -->
+  <!-- interface-copyright Pidgin Developers <devel@pidgin.im> -->
+  <template class="PidginStatusPrimitiveChooser" parent="AdwComboRow">
+    <property name="factory">
+      <object class="GtkBuilderListItemFactory">
+        <property name="bytes">
+<![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="GtkListItem">
+    <property name="child">
+      <object class="PidginStatusDisplay">
+        <binding name="primitive">
+          <closure type="PurpleStatusPrimitive" function="pidgin_status_primitive_chooser_primitive_cb">
+            <lookup name="item">GtkListItem</lookup>
+          </closure>
+        </binding>
+      </object>
+    </property>
+  </template>
+</interface>
+]]>
+        </property>
+      </object>
+    </property>
+    <property name="model">
+      <object class="GtkStringList">
+        <items>
+          <item>offline</item>
+          <item>available</item>
+          <item>unavailable</item>
+          <item>invisible</item>
+          <item>away</item>
+          <item>extended_away</item>
+        </items>
+      </object>
+    </property>
+  </template>
+</interface>
